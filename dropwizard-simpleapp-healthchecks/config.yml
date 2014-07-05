@@ -1,0 +1,5 @@
+team: Potato
+teamSize: 3
+
+# minimum memory in GB
+minMemory: 16
