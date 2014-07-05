@@ -1,4 +1,6 @@
 dropwizard
 ==========
 
-dropwizard examples
+This project contains some dropwizard examples:
+
+
