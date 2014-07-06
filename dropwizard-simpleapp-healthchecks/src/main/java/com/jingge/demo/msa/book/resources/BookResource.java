@@ -25,6 +25,13 @@ public class BookResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(BookResource.class);
 
     @GET
+    @Path("/available")
+    public Response isAvailable() {
+        return Response.ok().build();
+    }
+
+
+    @GET
     @Path("/{id}")
     @Timed
     public Response getBook(@PathParam("id") int id) {

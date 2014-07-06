@@ -1,8 +1,10 @@
 package com.jingge.demo.msa.book;
 
+import com.jingge.demo.msa.book.health.BookResourceHealthCheck;
 import com.jingge.demo.msa.book.health.SimpleHealthCheck;
 import com.jingge.demo.msa.book.resources.BookResource;
 import io.dropwizard.Application;
+import io.dropwizard.client.JerseyClientBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import io.dropwizard.setup.Bootstrap;
@@ -34,6 +36,7 @@ public class App extends Application<BookConfiguration>
                 + " members.");
 
         e.healthChecks().register("physicalMemorySize", new SimpleHealthCheck(c.getMinMemory()));
+        e.healthChecks().register("fooServer", new BookResourceHealthCheck(new JerseyClientBuilder(e).build("REST Client")));
         // Add the resource to the environment
         e.jersey().register(new BookResource());
     }
