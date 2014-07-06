@@ -5,13 +5,6 @@ import com.sun.management.OperatingSystemMXBean;
 
 import java.lang.management.ManagementFactory;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jing.ge
- * Date: 03.07.14
- * Time: 09:50
- * To change this template use File | Settings | File Templates.
- */
 public class SimpleHealthCheck extends HealthCheck {
 
     private int minMemory;

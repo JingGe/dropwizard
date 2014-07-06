@@ -8,10 +8,6 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * Keep refreshing http://localhost:8081/healthcheck you will see different result.
- * User: Jing
- * Date: 06.07.14
- * Time: 1:08
- * To change this template use File | Settings | File Templates.
  */
 public class BookResourceHealthCheck extends HealthCheck {
     private final Client client;
