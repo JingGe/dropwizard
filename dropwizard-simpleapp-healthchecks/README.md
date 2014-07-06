@@ -49,9 +49,12 @@ To make sure some rational values will be shown, the BookResource#getBook(int id
 ---------------------------
 Create you own health check
 ---------------------------
-It is also possible to implement you own health check by reating a new class that extends com.codahale.metrics.health.HealthCheck.
-The class com.jingge.demo.msa.book.health.SimpleHealthCheck shows you an example, where the OperatingSystemMXBean (which itself is another interesting story, please see http://sellmic.com/blog/2011/07/21/hidden-java-7-features-cpu-load-monitoring/) from JDK 1.7 is used to figure out some OS information at the hardware level.
+It is also possible to implement you own health check by reating a new class that extends com.codahale.metrics.health.HealthCheck. Two example HealthChecks are built in this applicaiton:
+
+**com.jingge.demo.msa.book.health.SimpleHealthCheck** shows you an example, where the OperatingSystemMXBean (which itself is another interesting story, please see http://sellmic.com/blog/2011/07/21/hidden-java-7-features-cpu-load-monitoring/) from JDK 1.7 is used to figure out some OS information at the hardware level.
 The minMemory is configured in the config.yml and injected into SimpleHealthCheck in App class.
+
+**com.jingge.demo.msa.book.health.BookResourceHealthCheck** shows you how to check if the book resource is available. Simulation has been built to show that the book resource is available or not. Keep refreshing http://localhost:8081/healthcheck you wil see different health check result of BookResource. 
 
 -----------------
 Try yourself
@@ -60,10 +63,15 @@ Try yourself
 **Time metric**
 
 1. Remove @Timed, run the application and take a look at http://localhost:8081/metrics
-2. add @Timed, run the application and take a look at http://localhost:8081/metrics. A new metric under timers is shown for com.jingge.demo.msa.book.resources.BookResource.getBook.
+2. add @Timed, run the application and take a look at http://localhost:8081/metrics. A new metric under timers is shown for com.jingge.demo.msa.book.resources.BookResource.getBook. Calling http://localhost:8080/book/1 multiple times manually or via load testing e.g. Jmeter you will see new metric result.
 
 **health check**
+
+> For com.jingge.demo.msa.book.health.SimpleHealthCheck
 
 1. change the minMemory in config.yml to 3, run the application and take a look at http://localhost:8081/healthcheck.
 2. change the minMemory in config.yml to 16 (assume you have a memory smaller than 16G), run the application and take a look at http://localhost:8081/heanlthcheck.
 
+> For com.jingge.demo.msa.book.health.BookResourceHealthCheck
+
+Keep refreshing http://localhost:8081/heanlthcheck, you will see differnt health check result of BookResource.
