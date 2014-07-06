@@ -64,6 +64,6 @@ Try yourself
 
 **health check**
 
-1. change the minMemory in config.yml to 3, run the application and take a look at http://localhost:8081/heanlthcheck.
+1. change the minMemory in config.yml to 3, run the application and take a look at http://localhost:8081/healthcheck.
 2. change the minMemory in config.yml to 16 (assume you have a memory smaller than 16G), run the application and take a look at http://localhost:8081/heanlthcheck.
 
