@@ -36,7 +36,7 @@ public class App extends Application<BookConfiguration>
                 + " members.");
 
         e.healthChecks().register("physicalMemorySize", new SimpleHealthCheck(c.getMinMemory()));
-        e.healthChecks().register("fooServer", new BookResourceHealthCheck(new JerseyClientBuilder(e).build("REST Client")));
+        e.healthChecks().register("BookResource", new BookResourceHealthCheck(new JerseyClientBuilder(e).build("REST Client")));
         // Add the resource to the environment
         e.jersey().register(new BookResource());
     }
