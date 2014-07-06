@@ -10,8 +10,12 @@ This simple dropwizard application presents a sample Restful app with the minimu
 - one main class: App
 - one unit test: AppTest
 
-----------------------
+**validation example**
 
+While creating a new book, the isdn property of the book will be validated.
+This validation example is limited to jus one property and one method in purpose.It should be very easy to understand how it works by reading the code.
+
+----------------------
 About the Test
 -----------------------
 **Attention!** The official document contains a bug:
@@ -45,3 +49,6 @@ The simple way is to point the browser to localhost:8080/book/1. You will see a 
 You can also use cURL if you like stay within the terminal.
 
 I personally recommend using Postman - REST Client https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en
+
+**isdn Validation**
+try creating a new book with empty isdn.
