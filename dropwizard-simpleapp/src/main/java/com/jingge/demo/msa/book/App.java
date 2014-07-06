@@ -7,10 +7,7 @@ import org.slf4j.LoggerFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
-/**
- * Hello world!
- *
- */
+
 public class App extends Application<BookConfiguration>
 {
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

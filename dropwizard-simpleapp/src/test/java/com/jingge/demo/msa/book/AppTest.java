@@ -13,9 +13,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.*;
 
-/**
- * Unit test for simple App.
- */
+
 public class AppTest
 {
     private Environment environment = mock(Environment.class);

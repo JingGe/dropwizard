@@ -2,13 +2,6 @@ package com.jingge.demo.msa.book.representations;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jing.ge
- * Date: 01.07.14
- * Time: 09:31
- * To change this template use File | Settings | File Templates.
- */
 public class Book {
 
     private int id;

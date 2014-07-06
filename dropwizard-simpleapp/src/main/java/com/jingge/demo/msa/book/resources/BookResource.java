@@ -11,13 +11,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import java.net.URI;
 
-/**
- * Created with IntelliJ IDEA.
- * User: jing.ge
- * Date: 01.07.14
- * Time: 10:03
- * To change this template use File | Settings | File Templates.
- */
+
 @Path("/book")
 @Produces(MediaType.APPLICATION_JSON)
 public class BookResource {
