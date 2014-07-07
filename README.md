@@ -1,4 +1,4 @@
-dropwizard
+dropwizard isolated examples
 ==========
 
 The idea of this project is to teach you dropwizard with different simple applications. Each application will focus only on one topic.
