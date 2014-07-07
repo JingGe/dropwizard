@@ -46,7 +46,7 @@ Try yourself
 
 The simple way is to point the browser to localhost:8080/book/1. You will see a json string.
 
-You can also use cURL if you like stay within the terminal.
+You can also use cURL if you like to stay within the terminal.
 
 I personally recommend using Postman - REST Client https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en
 
